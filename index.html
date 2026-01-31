@@ -5,8 +5,18 @@
   <title>Vandy's Bedroom</title>
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<script>
+  const lastUpdated = document.getElementById("last-updated");
+  const modifiedDate = new Date(document.lastModified);
 
+  lastUpdated.textContent = modifiedDate.toLocaleDateString("en-US", {
+    year: "numeric",
+    month: "short",
+    day: "numeric"
+  });
+</script>
+
+<body>
   <div class="top-bar">
     VANDY'S BEDROOM – SESSION 01.wav
   </div>
@@ -36,7 +46,7 @@
             <div class="now-right">
               <h3>"Happiest Day" by Vandy</h3>
               <audio controls>
-                <source src="audio/happiestdayfinalmaster.wav" type="audio/wav">
+                <source src="audio/happiestdayfinalmaster.mp3" type="audio/mpeg">
               </audio>
               <p class="external-link">
                 <a href="https://open.spotify.com/track/1azgUvkgeFvvbxVw9kICzu?si=489cd08afba845a0" target="_blank" rel="noopener">Stream on Spotify</a>
@@ -45,3 +55,14 @@
           </div>
         </div>
       </div>
+      <footer class="site-footer">
+  <div class="footer-inner">
+    <span>vandy’s bedroom</span>
+    <span class="footer-divider">|</span>
+    <span>last updated: <time id="last-updated"></time></span>
+    <span class="footer-divider">|</span>
+    <span>
+      <a href="https://vandysbedroom.com">vandysbedroom.com</a>
+    </span>
+  </div>
+</footer>
